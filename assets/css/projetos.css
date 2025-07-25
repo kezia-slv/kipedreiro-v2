@@ -1,0 +1,89 @@
+.projetos{
+    background-color: #353535;
+}
+.container-projetos {
+ 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.titulo-projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+ 
+.titulo-interno{
+    color: gold;
+}
+.cards-projeto{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+ 
+.card-projeto{
+    flex-basis: calc(50% - 10px);
+    height: 280px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+ 
+.projeto-imagem{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+    
+}
+ 
+    .figcaption-projeto {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000000cc, transparent);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        padding: 10px;
+        text-align: center;
+        transform: translateY(115%);
+        transition: transform 0.4s ease-in-out;
+        backdrop-filter: blur(5px);
+    }
+ 
+    .card-projeto:hover .figcaption-projeto{
+        transform: translateY(1%);
+    }
+ 
+.container-botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.botao-projetos{
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color
+    0.3s ease-in;
+}
