@@ -1,12 +1,13 @@
 <?php
 include_once 'backend/Database/Database.php';
-include_once 'backend/Usuario.php';
+include_once 'backend/Model/Contato.php';
 //operação ternaria
 $nome = $_POST["nome"] ?? '';
 $email = $_POST["email"] ?? '';
-$senha = $_POST["senha"] ?? '';
+$telefone = $_POST["telefone"] ?? '';
+$mensagem = $_POST["mensagem"] ?? '';
 
-$ok = registrarUsuario($db, $nome, $email, $senha);
+$ok = registrarContato($db, $nome, $email, $telefone, $mensagem);
 if($ok > 0 || $ok === true){
     echo "Usuário cadastrado com sucesso!";
 }else{
